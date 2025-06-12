@@ -23,10 +23,6 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {
                          HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
 
-        if (response.getStatus() != HttpServletResponse.SC_UNAUTHORIZED) {
-            return;
-        }
-
         // 응답 헤더 설정
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
 

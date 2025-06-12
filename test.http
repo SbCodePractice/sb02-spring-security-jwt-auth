@@ -33,25 +33,25 @@ GET http://localhost:8080/api/public/status
 
 ### GET Profile
 GET http://localhost:8080/api/user/profile
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQxOTUwLCJleHAiOjE3NDk3NDM3NTAsInJvbGUiOiJVU0VSIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjoyfQ.yqd00cJCF1MqgwdDK2WApzE4U3AYmixbL9iisPeNRy650zAw0o47r_YwtBItYkMR
+Authorization: Bearer {token}
 
 ### GET Profile (no token)
 GET http://localhost:8080/api/user/profile
 
 ### GET User data
 GET http://localhost:8080/api/user/data
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQxOTUwLCJleHAiOjE3NDk3NDM3NTAsInJvbGUiOiJVU0VSIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjoyfQ.yqd00cJCF1MqgwdDK2WApzE4U3AYmixbL9iisPeNRy650zAw0o47r_YwtBItYkMR
+Authorization: Bearer {token}
 
 ### GET User data  (no token)
 GET http://localhost:8080/api/user/data
 
 ### GET User info
 GET http://localhost:8080/api/user/2
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQxOTUwLCJleHAiOjE3NDk3NDM3NTAsInJvbGUiOiJVU0VSIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjoyfQ.yqd00cJCF1MqgwdDK2WApzE4U3AYmixbL9iisPeNRy650zAw0o47r_YwtBItYkMR
+Authorization: Bearer {token}
 
 ### GET User info (other user)
 GET http://localhost:8080/api/user/4
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQxOTUwLCJleHAiOjE3NDk3NDM3NTAsInJvbGUiOiJVU0VSIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjoyfQ.yqd00cJCF1MqgwdDK2WApzE4U3AYmixbL9iisPeNRy650zAw0o47r_YwtBItYkMR
+Authorization: Bearer {token}
 
 ### Login
 POST http://localhost:8080/api/auth/login
@@ -64,24 +64,44 @@ Content-Type: application/json
 
 ### GET Manager Dashboard
 GET http://localhost:8080/api/manager/dashboard
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYW5hZ2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQyNTQ1LCJleHAiOjE3NDk3NDQzNDUsInJvbGUiOiJNQU5BR0VSIiwiZW1haWwiOiJtYW5hZ2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjozfQ.PE3J0QHww4B0e_TfdLxd3bNqqsVCNb2BwfLWqwR-nDkD64ly1q8g7TV3m3GtKMeJ
-
-### GET Manager Dashboard (normal user)
-GET http://localhost:8080/api/manager/dashboard
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQxOTUwLCJleHAiOjE3NDk3NDM3NTAsInJvbGUiOiJVU0VSIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjoyfQ.yqd00cJCF1MqgwdDK2WApzE4U3AYmixbL9iisPeNRy650zAw0o47r_YwtBItYkMR
+Authorization: Bearer {token}
 
 ### GET Manager Team
 GET http://localhost:8080/api/manager/team
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYW5hZ2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQyNTQ1LCJleHAiOjE3NDk3NDQzNDUsInJvbGUiOiJNQU5BR0VSIiwiZW1haWwiOiJtYW5hZ2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjozfQ.PE3J0QHww4B0e_TfdLxd3bNqqsVCNb2BwfLWqwR-nDkD64ly1q8g7TV3m3GtKMeJ
-
-### GET Manager Team (normal user)
-GET http://localhost:8080/api/manager/team
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQxOTUwLCJleHAiOjE3NDk3NDM3NTAsInJvbGUiOiJVU0VSIiwiZW1haWwiOiJ1c2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjoyfQ.yqd00cJCF1MqgwdDK2WApzE4U3AYmixbL9iisPeNRy650zAw0o47r_YwtBItYkMR
-
+Authorization: Bearer {token}
 
 ### GET Manager Reports
 POST http://localhost:8080/api/manager/reports
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYW5hZ2VyIiwiaXNzIjoiY29tLmV4YW1wbGUuYXBwIiwiaWF0IjoxNzQ5NzQyNTQ1LCJleHAiOjE3NDk3NDQzNDUsInJvbGUiOiJNQU5BR0VSIiwiZW1haWwiOiJtYW5hZ2VyQGV4YW1wbGUuY29tIiwidXNlcklkIjozfQ.PE3J0QHww4B0e_TfdLxd3bNqqsVCNb2BwfLWqwR-nDkD64ly1q8g7TV3m3GtKMeJ
-#Content-Type: application/json
+Authorization: Bearer {token}
+Content-Type: application/json
 
 {"data": "hello world"}
+
+### Login
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "user",
+  "password": "password"
+}
+
+### GET Profile
+GET http://localhost:8080/api/user/profile
+Authorization: Bearer {token}
+
+### Refresh Token
+POST http://localhost:8080/api/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{token}"
+}
+
+### Logout
+POST http://localhost:8080/api/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "{token}"
+}
