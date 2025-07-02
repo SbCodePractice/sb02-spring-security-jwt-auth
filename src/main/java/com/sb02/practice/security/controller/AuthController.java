@@ -6,6 +6,7 @@ import com.sb02.practice.security.dto.TokenRefreshRequest;
 import com.sb02.practice.security.dto.TokenRefreshResponse;
 import com.sb02.practice.security.entity.RefreshToken;
 import com.sb02.practice.security.entity.User;
+import com.sb02.practice.security.service.CustomUserDetailsService;
 import com.sb02.practice.security.service.RefreshTokenService;
 import com.sb02.practice.security.service.UserService;
 import com.sb02.practice.security.util.JwtUtil;
@@ -60,7 +61,7 @@ public class AuthController {
             );
 
             // 인증 성공 시 사용자 정보 조회
-            User user = userService.findByUsername(loginRequest.getUsername());
+            User user = ((CustomUserDetailsService.CustomUserPrincipal) authentication.getPrincipal()).getUser();
 
             // Access Token 생성
             Map<String, Object> claims = Map.of(
